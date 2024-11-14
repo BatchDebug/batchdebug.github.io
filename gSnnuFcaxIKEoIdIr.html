@@ -1,0 +1,263 @@
+<html><head><base href="fake" target="_blank"></base>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  .header {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .article-meta {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .article-image {
+    width: 100%;
+    height: 400px;
+    background: #f0f0f0;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+  }
+
+  .cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.9);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .cookie-text {
+    margin-right: 20px;
+  }
+
+  .btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .share-buttons {
+    margin: 20px 0;
+  }
+
+  .share-btn {
+    background: #eee;
+    border: none;
+    padding: 8px 16px;
+    margin-right: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .video-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 1001;
+  }
+
+  .video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1002;
+    background: transparent;
+    display: none;
+  }
+
+  .cookie-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1003;
+  }
+
+  .cookie-modal {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90%;
+  }
+
+  .cookie-modal h2 {
+    margin-top: 0;
+  }
+
+  .cookie-options {
+    margin: 20px 0;
+  }
+
+  .cookie-option {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  .cookie-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  .cookie-overlay .btn {
+    font-size: 16px;
+  }
+
+  .disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+      <h1>Tech Insights Daily</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>10 Essential Cybersecurity Tips for 2024</h2>
+    <div class="article-meta">
+      By John Smith | January 15, 2024 | 5 min read
+    </div>
+
+    <div class="article-image">
+      [Featured Image: Cybersecurity Illustration]
+    </div>
+
+    <div class="share-buttons">
+      <button class="share-btn" onclick="rickroll()">Share on Twitter</button>
+      <button class="share-btn" onclick="rickroll()">Share on Facebook</button>
+      <button class="share-btn" onclick="rickroll()">Share on LinkedIn</button>
+    </div>
+
+    <p>In today's digital age, cybersecurity has become more important than ever. With the increasing sophistication of cyber threats, it's crucial to stay protected...</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+  </div>
+
+  <div class="cookie-banner">
+    <div class="cookie-text">
+      We use cookies to enhance your browsing experience. By continuing to use this site, you agree to our use of cookies.
+    </div>
+    <button class="btn" onclick="rickroll()">Accept All Cookies</button>
+    <button class="btn" onclick="rickroll()">Customize Settings</button>
+  </div>
+
+  <div class="video-container">
+    <video id="rickroll" width="853" height="480" loop autoplay>
+      <source src="https://ia601309.us.archive.org/27/items/rick-roll/Rick%20Roll.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="video-overlay"></div>
+
+  <div class="cookie-overlay">
+    <div class="cookie-modal">
+      <h2>Cookie Settings</h2>
+      <p>We use cookies to enhance your experience on our website. Please choose your cookie preferences below:</p>
+      
+      <div class="cookie-options">
+        <div class="cookie-option">
+          <input type="checkbox" checked disabled id="essential">
+          <label for="essential">Essential Cookies (Required)</label>
+        </div>
+        <div class="cookie-option">
+          <input type="checkbox" checked disabled id="performance">
+          <label for="performance">Performance Cookies</label>
+        </div>
+        <div class="cookie-option">
+          <input type="checkbox" checked disabled id="marketing">
+          <label for="marketing">Marketing Cookies</label>
+        </div>
+      </div>
+
+      <div class="cookie-buttons">
+        <button class="btn" onclick="rickroll()">Customize Settings</button>
+        <button class="btn" onclick="rickroll()">Accept All Cookies</button>
+      </div>
+
+      <p style="font-size: 12px; margin-top: 20px; color: #666;">
+        By clicking "Accept All Cookies", you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function rickroll() {
+      const videoContainer = document.querySelector('.video-container');
+      const videoOverlay = document.querySelector('.video-overlay');
+      const rickrollVideo = document.getElementById('rickroll');
+      const cookieBanner = document.querySelector('.cookie-banner');
+      const cookieOverlay = document.querySelector('.cookie-overlay');
+      
+      videoContainer.style.display = 'block';
+      videoOverlay.style.display = 'block';
+      cookieBanner.style.display = 'none';
+      cookieOverlay.style.display = 'none';
+      
+      rickrollVideo.play();
+      
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          e.preventDefault();
+          return false;
+        }
+      });
+    }
+
+    document.body.addEventListener('click', function(e) {
+      if (!e.target.matches('.video-container, .video-container *')) {
+        rickroll();
+      }
+    });
+  </script>
+</body></html>
